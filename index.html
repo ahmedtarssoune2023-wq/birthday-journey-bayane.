@@ -1,0 +1,386 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Birthday Journey | Bayane 🎀</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Georgia, serif;
+  background: #fff0f6;
+  color: #713b56;
+}
+
+.page {
+  display: none;
+  min-height: 100vh;
+  padding: 24px 16px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+
+.page.active {
+  display: flex;
+}
+
+.card {
+  width: 100%;
+  max-width: 850px;
+  padding: 25px;
+  background: rgba(255, 248, 252, 0.88);
+  border: 1px solid rgba(255,255,255,0.9);
+  border-radius: 24px;
+  box-shadow: 0 10px 35px #9c55772b;
+  backdrop-filter: blur(5px);
+}
+
+h1 {
+  font-size: clamp(28px, 6vw, 44px);
+  margin-bottom: 18px;
+  color: #c04f83;
+}
+
+p {
+  font-size: 17px;
+  line-height: 1.9;
+  white-space: pre-line;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+button {
+  border: none;
+  border-radius: 30px;
+  padding: 13px 22px;
+  font-size: 16px;
+  background: #e985b4;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 12px #b45b842c;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+.poem-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+  max-width: 1050px;
+  align-items: center;
+}
+
+.poem {
+  text-align: right;
+}
+
+video {
+  width: 100%;
+  max-height: 65vh;
+  border-radius: 18px;
+  background: #222;
+}
+
+@media (max-width: 650px) {
+  .poem-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .poem {
+    text-align: center;
+  }
+
+  .card {
+    padding: 20px 15px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- AUDIO -->
+<audio id="music1" loop preload="auto">
+  <source src="music/music1.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="music2" loop preload="auto">
+  <source src="music/music2.mp3" type="audio/mpeg">
+</audio>
+
+<!-- PAGE 1 -->
+<section class="page active" id="page1"
+style="background-image:url('images/page1.jpg')">
+
+  <div class="card">
+    <h1>Slm Bayane! 🩷🎀</h1>
+
+    <p>9adit lik had site 3la 9ablik, l sabab wa7ed: bghit nfar7ek.
+Ntmna mn 9elbi tfar7i bih o y3jbk, w t3ichi wa7ed lwa9t zwine m3ah.
+
+Stamta3i! 🤗🎀</p>
+  </div>
+
+  <div class="buttons">
+    <button onclick="begin()">البداية 🩷</button>
+  </div>
+</section>
+
+<!-- PAGE 2 -->
+<section class="page" id="page2"
+style="background-image:url('images/page2.jpg')">
+
+  <div class="card">
+    <h1>To Bayane 🩷</h1>
+
+    <p>Bayane, nti a3az insana 3endi 3ziza 3liya bezzzzaf 🩷
+
+Nti wa7da mn nas li kanou sanad 7a9i9i liya, o 3awnitini f bezzaf dial l7wayj, o dima kenti kat9albi 3la ay tari9a bach tkhalini far7an. Lah ykhalik liya a Bayane.
+
+Lhdra dialek, nasi7tek, ihtimamk, o khofek 3liya, kolchi mazal f bali, o 3omri nnsah. Chokran lik 3la kolchi, 3la kol mara sme3tini fiha, 3la kol nasi7a 3titiha liya, o 3la kol mara 7awelti tkhalini n7ess b far7a. 🤍
+
+Bayanoche, a7san 7aja trat liya f 7yati hiya anani t3reft 3lik. O sara7a, kandem 7it ma t3reftch 3lik mn ch7al hadi, 7it had lmoda li t3reft 3lik fiha Kanet a7san fatra mn 7yati kamla .
+
+Bghitk ghir t3rfi 9imtek 3endi, o ch7al nti 3ziza 3liya. Wlah ila kanbghi ndir ay 7aja n9der 3liha bach nfar7ek, wakha ndir m3ak ghir 1% mn dakchi li derti m3aya.
+
+Ma3arfch wach ghadi n9der nrd lik ga3 dakchi li 3titiini, walakin li 3aref howa belli lkhir li derti m3aya 3omri nnsah, o ghadi yb9a dayman f bali.
+
+Chokran Bayane 7it dkhelti l7yati o khalitiha 7sen. 🩷</p>
+  </div>
+
+  <div class="buttons">
+    <button onclick="returnHome()">الرجوع</button>
+    <button onclick="goToPage3()">الصفحة 3 🌷</button>
+  </div>
+</section>
+
+<!-- PAGE 3 -->
+<section class="page" id="page3"
+style="background-image:url('images/page3.jpg')">
+
+  <div class="poem-layout">
+
+    <div class="card poem">
+      <h1>إلى بيان، في يوم ميلادك 🩷</h1>
+
+      <p>يا بيان، يا من لك في القلب منزلة
+ما بدلتها الأيام، ولا غيرتها المسافات
+
+ما كنت أبحث عن سند في رحلتي
+لكنني وجدت في قربك معنى الثبات
+
+كنت معي في الأوقات التي لم تكن سهلة
+وكنت بكلمة منك تردين إلى قلبي الحياة
+
+وحتى النصائح التي قلتها لي مرة
+ما زال صداها في بالي، ما محتها الأيام
+
+قد أكون لم أقل لك كم أنت عزيزة
+وقد أعجز أحيانا عن التعبير عن هذه المشاعر
+
+لكن والله لن أنسى الخير الذي رأيته منك
+ولن أنسى قلبا كان لي وقت الشدة سندا
+
+واليوم، في عيد ميلادك، ليس لدي ما أهديك
+سوى دعوة صادقة أرفعها إلى الله
+
+أن يحفظك من كل ما قد يؤلمك
+وأن يمنحك من الفرح بقدر ما تمنيت الخير لغيرك
+
+وإن كانت لي أمنية أتمناها لك
+فهي أن تري نفسك بعيون من يعزونك
+
+وأن تعرفي أن وجودك لم يكن أمرا عابرا
+وأنك تركت في حياتي أثرا لا يمحوه الزمن
+
+كل عام وأنت بخير يا بيان
+وكل عام وأنت أقرب إلى كل حلم تمنيت تحقيقه
+
+وإن نسيت يوما كم تستحقين من الخير
+فتذكري أن في هذه الدنيا من يتمنى أن يراك سعيدة دائما. 🩷</p>
+    </div>
+
+    <div class="card">
+      <video id="birthdayVideo" controls playsinline preload="metadata">
+        <source src="video/bayane.mp4" type="video/mp4">
+        Your browser does not support video.
+      </video>
+      <p style="margin-top:12px">A special memory for you, Bayane 🎀</p>
+    </div>
+
+  </div>
+
+  <div class="buttons">
+    <button onclick="returnToPage2()">الرجوع</button>
+    <button onclick="goToPage4()">النهاية 🎂</button>
+  </div>
+</section>
+
+<!-- PAGE 4 -->
+<section class="page" id="page4"
+style="background-image:url('images/page4.jpg')">
+
+  <div class="card">
+    <h1>Happy Birthday, Bayanoche! 🎂🩷</h1>
+
+    <p>Lyouma twldat lbnt li rj3at liya l2amal f l7ayat... 🩷
+
+Malikat October, a7san bnt chaftha f 7yati, mn na7iya lfikriya o ljamaliya. 🤍
+
+3id milad sa3id, Bayanoche! 🤗🎂
+
+Ntmna tb9ay fr7ana dima, o had l3am ykoun l3awad 3la ga3 sinin li fato, o ytra lik ga3 dakchi li kenti katmnany, o tnaj7i b no9ta zwina bezzzzaf, inchallah. ☺️💗
+
+You deserve all the beautiful things life has to offer, Malikat October. 👑🩷</p>
+  </div>
+
+  <div class="buttons">
+    <button onclick="returnHome()">البداية 🩷</button>
+    <button onclick="returnToPage3()">الصفحة 3 🌷</button>
+  </div>
+</section>
+
+<script>
+const m1 = document.getElementById("music1");
+const m2 = document.getElementById("music2");
+const birthdayVideo = document.getElementById("birthdayVideo");
+
+let pos1 = 0;
+let pos2 = 0;
+let musicToResume = null;
+
+/** @param {number} number */
+function showPage(number) {
+  document.querySelectorAll(".page").forEach(page => {
+    page.classList.remove("active");
+  });
+
+  const target = document.getElementById("page" + number);
+  if (target) target.classList.add("active");
+}
+
+function savePositions() {
+  if (!m1.paused) pos1 = m1.currentTime;
+  if (!m2.paused) pos2 = m2.currentTime;
+}
+
+function playMusic1() {
+  m2.pause();
+  pos2 = m2.currentTime;
+
+  m1.currentTime = pos1;
+  m1.play().catch(() => {});
+}
+
+function playMusic2() {
+  m1.pause();
+  pos1 = m1.currentTime;
+
+  m2.currentTime = pos2;
+  m2.play().catch(() => {});
+}
+
+function begin() {
+  playMusic1();
+  showPage(2);
+}
+
+function goToPage3() {
+  playMusic2();
+  showPage(3);
+}
+
+function returnHome() {
+  if (birthdayVideo) birthdayVideo.pause();
+  musicToResume = null;
+  playMusic1();
+  showPage(1);
+}
+
+function returnToPage2() {
+  if (birthdayVideo) birthdayVideo.pause();
+  musicToResume = null;
+  showPage(2);
+}
+
+function goToPage4() {
+  if (birthdayVideo) birthdayVideo.pause();
+  musicToResume = null;
+  playMusic2();
+  showPage(4);
+}
+
+function returnToPage3() {
+  if (birthdayVideo) birthdayVideo.pause();
+  musicToResume = null;
+  playMusic2();
+  showPage(3);
+}
+
+// Save music position as it plays
+m1.addEventListener("timeupdate", () => {
+  if (!m1.paused) pos1 = m1.currentTime;
+});
+
+m2.addEventListener("timeupdate", () => {
+  if (!m2.paused) pos2 = m2.currentTime;
+});
+
+// Pause music when the video starts,
+// then resume the same music at the saved position when it ends.
+if (birthdayVideo) {
+  birthdayVideo.addEventListener("play", () => {
+    if (!m1.paused) {
+      musicToResume = m1;
+      pos1 = m1.currentTime;
+      m1.pause();
+    } else if (!m2.paused) {
+      musicToResume = m2;
+      pos2 = m2.currentTime;
+      m2.pause();
+    } else {
+      musicToResume = null;
+    }
+  });
+
+  birthdayVideo.addEventListener("ended", () => {
+    if (musicToResume) {
+      const music = musicToResume;
+
+      if (music === m1) {
+        music.currentTime = pos1;
+      } else {
+        music.currentTime = pos2;
+      }
+
+      music.play().catch(() => {});
+      musicToResume = null;
+    }
+  });
+}
+</script>
+
+</body>
+  </html>
+  
